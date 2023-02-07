@@ -32,7 +32,7 @@ import java.util.Scanner;
         Scanner sc = new Scanner(System.in);
         do {
             invalidInput = false;
-            System.out.print("Please enter your monthly savings rate: ");
+            System.out.println("Please enter your monthly savings rate: ");
             savingsAmountString = sc.nextLine();
             try {
                 savingsAmount = (int) Math.round(Double.parseDouble(savingsAmountString));

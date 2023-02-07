@@ -39,7 +39,19 @@ public class PopulationProjector {
      */
     public static void main(String[] args) throws Exception {
         // complete this function to solve the problem
+        int currentPopulation = 332403650;
+        int secondsPerYear = 365*24*60*60;
+        int printedPopulation = 0;
+        int year = 2022;
+        int births = (int) (secondsPerYear/7.0d);
+        int deaths = (int) (secondsPerYear/13.0d);
+        int immigrations = (int) (secondsPerYear/45.0d);
+        System.out.println("Here are the projected population numbers for the next five years:");
+        for (int i=0;i<5;i++){
+            printedPopulation = currentPopulation + births - deaths + immigrations;
+            currentPopulation = printedPopulation;
+            year++;
+            System.out.println("- Year "+ year + ": "+printedPopulation);
+        }
+        }
     }
-
-
-}
