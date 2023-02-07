@@ -32,6 +32,19 @@ public class RunningSpeedCalculator {
    */
   public static void main(String[] args) throws Exception {
         // complete this function to solve the problem
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How many kilometers did you run?");
+        String distanceString = sc.nextLine();
+        double distanceKilometers = Double.parseDouble(distanceString);
+        double distanceMiles = distanceKilometers/1.609344;
+        System.out.println("How many minutes did it take you?");
+        String timeString = sc.nextLine();
+        double timeMinutes = Double.parseDouble(timeString);
+        double timeHours = timeMinutes/60;
+        double averageSpeed = distanceMiles/timeHours;
+        System.out.println("Your average speed was "+averageSpeed+" miles per hour.");
+
+
   }
 
 
